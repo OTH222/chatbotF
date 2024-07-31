@@ -1,0 +1,96 @@
+/* App.css */
+
+/* Style du bouton de chatbot */
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chatbot-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.chatbot-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.chatbot-popup.show {
+  display: flex;
+  transform: scale(1);
+}
+
+.chatbot-popup .messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chatbot-popup .message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.chatbot-popup .message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.chatbot-popup .message.bot {
+  align-self: flex-start;
+  background-color: #e0e0e0;
+  color: #000000;
+}
+
+.chatbot-popup input[type="text"] {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: calc(100% - 90px);
+  margin-right: 10px;
+}
+
+.chatbot-popup button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-popup button:hover {
+  background-color: #0056b3;
+}
